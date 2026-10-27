@@ -11,7 +11,7 @@ console.log(typeof customer);
 const customerOnly = [verifyToken, allowRoles("customer")];
 
 // Profile
-router.get("/customers/me", verifyToken, customer.getMe);
+router.get("/customers/me", customerOnly, customer.getMe);
 router.put("/customers/me", customerOnly, customer.updateMe);
 
 // Cart

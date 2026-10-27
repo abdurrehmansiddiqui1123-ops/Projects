@@ -102,7 +102,7 @@ exports.login = async (req, res) => {
         email: customer.email,
         phone_number: customer.phone_number,
       },
-      token: createToken(customer.customer_id),
+      token: createToken(customer.customer_id, "customer"),
     });
   } catch (err) {
     console.error(err);
